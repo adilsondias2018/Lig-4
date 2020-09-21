@@ -1,4 +1,4 @@
-linha = document.querySelectorAll('tr')
+
 
 
 
