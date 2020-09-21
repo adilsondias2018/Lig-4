@@ -16,9 +16,7 @@ main{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: black;
-
-
+    
 }
 
 tbody{
@@ -27,17 +25,33 @@ tbody{
 
 table{
 
-    width:  ;
-
-
+    table-layout:fixed;
+    width: 50vw;
+    height: 50vh;   
+    border-collapse: collapse;
+    border: solid 3px #0180c9;
+    
 }
-
 table tr{
-
-
+ 
+    
 }
 
 table tr td{
+
+    width: 20px;    
+    border: solid 3px #bf18f1;
+    border-bottom: none;   
+
+}
+
+#blackCircle{
+
+
+
+}
+
+#redCircle{
 
 
 }

@@ -1,0 +1,4 @@
+linha = document.querySelectorAll('tr')
+
+
+
