@@ -6,95 +6,59 @@
 
 body{
 
-    background-image: url(./img/background.jpg);
-    background-repeat: no-repeat;
+    background-image: url('./img/background.jpg');    
     background-size: cover;
-    width: 100vw;
-    height: 100vh;    
+    
 
 }
 
-body img{
-
-    width: 100%;
-}
 
 main{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100vw;
     height: 100vh;
-    margin-top: 30vh;
-    
-
-}
-
-tbody{
-    
-    border-radius: 10px;
-    padding: 5px 5px;
     display: flex;
-    height: 100%;   
+    justify-content: center;
+    align-items: center;
 }
 
 table{
-    background-image:url(./img/backgroun_wood.png);
-    background-repeat: no-repeat, repeat;
-    table-layout:fixed;
-    width: 425px;
-    height: 375px;       
+
+    background-image: url('./img/backgroun_wood.png');
+    background-position: center top;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 5px 30px black;
-    /* border: solid 3px #0180c9; */
-    
 }
+
 table tr{
-    width: 100% ;
+
     display: flex;
     flex-direction: column;
 
+} 
 
- 
-}
-
-table tr td{   
-    width: 100%px;
-    height: 60.71px;
+table tbody{
+    
     display: flex;
-    justify-content: center;
-    justify-items: center;
 
-
+    
 }
-table tr td div{
-
-    width: 80%;
-    height: 80%;
-    background-color: blue;
+table tr td{
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    padding: 0 5px;
-    background: -moz-radial-gradient(transparent 10px, rgba(0,0,0,1) 30px);
-    background: -webkit-radial-gradient(transparent 10px, rgba(0,0,0,1) 30px);
-    background: -ms-radial-gradient(transparent 10px,rgba(0,0,0,1) 30px);
-    background: -o-radial-gradient(transparent 10px, rgba(0,0,0,1) 30px);
-    display: flex;
-    align-items: center;
-}
-#blackCircle{
-
-    background-image: url(./img/first.png);
-
-
-}
-
-#yellowCircle{
-
-}
-
-.fundoTabela{
+    margin: 10px;
+    background: -webkit-radial-gradient(transparent 5px, rgba(0,0,0,1) 30px);
     
 
+
+}
+
+
+#yelloCircle{
+
+
+}
+
+#blackCircle{
 
 }
