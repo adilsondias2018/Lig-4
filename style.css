@@ -65,10 +65,10 @@ table tr td div{
     background-color: blue;
     border-radius: 50%;
     padding: 0 5px;
-    background: -moz-radial-gradient(transparent 10px, rgba(0,0,0,1) 10px);
+    background: -moz-radial-gradient(transparent 10px, rgba(0,0,0,1) 30px);
     background: -webkit-radial-gradient(transparent 10px, rgba(0,0,0,1) 30px);
-    background: -ms-radial-gradient(transparent 150px, rgb(16, 205, 238) 150px);
-    background: -o-radial-gradient(transparent 150px, rgba(0,0,0,1) 150px);
+    background: -ms-radial-gradient(transparent 10px,rgba(0,0,0,1) 30px);
+    background: -o-radial-gradient(transparent 10px, rgba(0,0,0,1) 30px);
 }
 #blackCircle{
 
@@ -77,12 +77,12 @@ table tr td div{
 
 }
 
-#redCircle{
+#yellowCircle{
 
 }
 
 .fundoTabela{
-    /* background-image:url(./img/backgroun_wood.png); */
+    
 
 
 }
