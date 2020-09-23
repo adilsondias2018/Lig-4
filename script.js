@@ -16,29 +16,23 @@ function play(e){
     playerOne.src = './img/first.png'
     playerTwo.src = './img/second.png'
     let columnTarget = e.target.closest("tr")
-    let x = columnTarget.children.length
-    
-    for(let i = 0; i <  x ;i++){
+   
+    for(let i = 0; i < columnTarget.children.length  ;i++){
         
-        if(columnTarget.children[i].child === undefined){
-           console.log(columnTarget.children[i].child)
+        if(columnTarget.children[i].children.length === 0){
             if(count % 2 === 0){
-                columnTarget.children[i].appendChild(playerOne)  
-                count+=1;
-            }   
-            if(count % 2 != 0){
-                columnTarget.children[i].appendChild(playerTwo)
-                count+=1;
-                }
-        }
-        else {
+                count++;
+                return columnTarget.children[i].appendChild(playerOne);
+            }
+            else{
+                count++;
+                return columnTarget.children[i].appendChild(playerTwo);   
+            }
             
-        } 
+        }
         
-
     }
-    
-    
+     
 }
 
 
