@@ -57,10 +57,6 @@ table tr td{
     
     
 
-
-}
-
-
 #yelloCircle{
 
 
@@ -68,4 +64,8 @@ table tr td{
 
 #blackCircle{
 
+}
+
+#coluna1,#coluna2,#coluna3,#coluna4,#coluna5,#coluna6,#coluna7:hover {
+   cursor: pointer;
 }
