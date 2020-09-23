@@ -54,18 +54,3 @@ table tr td{
     background: -o-radial-gradient(transparent 5px, rgba(0,0,0,1) 30px);
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.329);
 }
-    
-    
-
-#yelloCircle{
-
-
-}
-
-#blackCircle{
-
-}
-
-#coluna1,#coluna2,#coluna3,#coluna4,#coluna5,#coluna6,#coluna7:hover {
-   cursor: pointer;
-}
