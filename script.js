@@ -1,7 +1,7 @@
 // Images
 let colunas = document.getElementById('colunas').children // id do tbody
 let count = 0
-let empate = 0 
+let empate = 0
 let main = []
 
 function addButton() {
@@ -43,7 +43,6 @@ function play(e) {
 
 }
 
-
 // Função adiciona array de td em cada indice do array main
 function pushMain() {
   for (let i = 0; i < colunas.length; i++) {
@@ -52,7 +51,7 @@ function pushMain() {
 }
 
 
-// Função para validar as condições de vitória(diagonal, vertical, horizontal) e empate
+// Função para validar as condições de vitória(diagonal, vertical, horizontal)
 function validate() {
 
   // vertical
@@ -62,6 +61,7 @@ function validate() {
       if (elemento !== undefined) {
         if (elemento === main[i][j + 1].classList[0] && elemento === main[i][j + 2].classList[0] && elemento === main[i][j + 3].classList[0]) {
           // Aqui vai a função para animar a box passando o "elemento" como parametro
+          console.log(elemento)
         }
       }
     }
@@ -75,6 +75,7 @@ function validate() {
       if (elemento !== undefined) {
         if (elemento === main[i + 1][j].classList[0] && elemento === main[i + 2][j].classList[0] && elemento === main[i + 3][j].classList[0]) {
           // Aqui vai a função para animar a box passando o "elemento" como parametro
+          console.log(elemento)
         }
       }
     }
@@ -88,6 +89,7 @@ function validate() {
       if (elemento !== undefined) {
         if (elemento === main[i + 1][j + 1].classList[0] && elemento === main[i + 2][j + 2].classList[0] && elemento === main[i + 3][j + 3].classList[0]) {
           // Aqui vai a função para animar a box passando o "elemento" como parametro
+          console.log(elemento)
         }
       }
     }
@@ -102,6 +104,7 @@ function validate() {
       if (elemento !== undefined && i > 2) {
         if (elemento === main[i - 1][j + 1].classList[0] && elemento === main[i - 2][j + 2].classList[0] && elemento === main[i - 3][j + 3].classList[0]) {
           // Aqui vai a função para animar a box passando o "elemento" como parametro
+          console.log(elemento)
         }
       }
     }
@@ -109,19 +112,37 @@ function validate() {
 
 
 
-  // empate -> Precisa de uma refatorada!
-    for (let i = 0; i < main.length; i++) {
-      for (let j = 0; j < main[i].length; j++) {
-        if (main[i][j].classList.length !== 0) {
-          empate++
-          if(empate > 902){
-            // função para empate vai aqui
-          }
-        } 
+  // empate
+  for (let i = 0; i < main.length; i++) {
+    for (let j = 0; j < main[i].length; j++) {
+      if (main[i][j].classList.length !== 0) {
+        empate++
+        if (empate > 902) {
+          // Aqui vai a função empate
+          console.log("empate")
+        }
       }
     }
-  }  
+  }
 
 
 
+}
 
+
+pushMain()
+
+
+
+// let $btn = document.getElementById("btn")
+
+
+// $btn.addEventListener("click", refresh)
+// // apagar
+// function refresh() {
+//   for (let i = 0; i < colunas.length; i++) {
+//     for (let j = 0; j < colunas[i].children.length; j++) {
+//       colunas[i].children[j].removeChild("img")
+//     }
+//   }
+// }
