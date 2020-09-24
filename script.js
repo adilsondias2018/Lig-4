@@ -29,14 +29,14 @@ function play(e) {
         columnTarget.children[i].classList.add("first")
         columnTarget.children[i].appendChild(playerOne)
         validate()
-        return
+        return;
       }
       else {
         count++;
         columnTarget.children[i].classList.add("second")
         columnTarget.children[i].appendChild(playerTwo)
         validate()
-        return
+        return;
       }
     }
   }
@@ -50,6 +50,8 @@ function pushMain() {
   }
 }
 
+pushMain();
+
 
 // Função para validar as condições de vitória(diagonal, vertical, horizontal)
 function validate() {
@@ -60,8 +62,7 @@ function validate() {
       let elemento = main[i][j].classList[0];
       if (elemento !== undefined) {
         if (elemento === main[i][j + 1].classList[0] && elemento === main[i][j + 2].classList[0] && elemento === main[i][j + 3].classList[0]) {
-          // Aqui vai a função para animar a box passando o "elemento" como parametro
-          console.log(elemento)
+          verifyWinner(elemento)
         }
       }
     }
@@ -74,8 +75,7 @@ function validate() {
       let elemento = main[i][j].classList[0];
       if (elemento !== undefined) {
         if (elemento === main[i + 1][j].classList[0] && elemento === main[i + 2][j].classList[0] && elemento === main[i + 3][j].classList[0]) {
-          // Aqui vai a função para animar a box passando o "elemento" como parametro
-          console.log(elemento)
+          verifyWinner(elemento)
         }
       }
     }
@@ -88,8 +88,7 @@ function validate() {
       elemento = main[i][j].classList[0];
       if (elemento !== undefined) {
         if (elemento === main[i + 1][j + 1].classList[0] && elemento === main[i + 2][j + 2].classList[0] && elemento === main[i + 3][j + 3].classList[0]) {
-          // Aqui vai a função para animar a box passando o "elemento" como parametro
-          console.log(elemento)
+          verifyWinner(elemento)
         }
       }
     }
@@ -103,8 +102,7 @@ function validate() {
       elemento = main[i][j].classList[0];
       if (elemento !== undefined && i > 2) {
         if (elemento === main[i - 1][j + 1].classList[0] && elemento === main[i - 2][j + 2].classList[0] && elemento === main[i - 3][j + 3].classList[0]) {
-          // Aqui vai a função para animar a box passando o "elemento" como parametro
-          console.log(elemento)
+          verifyWinner(elemento)
         }
       }
     }
@@ -118,8 +116,7 @@ function validate() {
       if (main[i][j].classList.length !== 0) {
         empate++
         if (empate > 902) {
-          // Aqui vai a função empate
-          console.log("empate")
+          verifyWinner('Tie')
         }
       }
     }
@@ -130,19 +127,22 @@ function validate() {
 }
 
 
-pushMain()
 
+function verifyWinner(result){
+  let getMain = document.querySelector('main');
+  let modalTitle = document.querySelector('.modal__header h2');
+  let buttonModal = document.querySelector('.modal__button');
 
+  if(result !== 'Tie'){
+    modalTitle.innerHTML = `${result} Player <br> Winner`;
+  }else{
+    modalTitle.innerHTML = `${result}`;
+  }
 
-// let $btn = document.getElementById("btn")
+  getMain.classList.add('--active')
+  
+  buttonModal.addEventListener('click', () => {
+      location.reload();
+  })
 
-
-// $btn.addEventListener("click", refresh)
-// // apagar
-// function refresh() {
-//   for (let i = 0; i < colunas.length; i++) {
-//     for (let j = 0; j < colunas[i].children.length; j++) {
-//       colunas[i].children[j].removeChild("img")
-//     }
-//   }
-// }
+}
