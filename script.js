@@ -1,11 +1,11 @@
-let colunas = document.getElementById('colunas').children 
+let columns = document.getElementById('colunas').children 
 let count = 0
-let empate = 0
+let tie = 0
 let main = []
 
 function addButton() {
-  for (let i = 0; i < colunas.length; i++) {
-    colunas[i].addEventListener("click", (e) => {
+  for (let i = 0; i < columns.length; i++) {
+    columns[i].addEventListener("click", (e) => {
       play(e)
     })
   }
@@ -44,8 +44,8 @@ function play(e) {
 
 // Função adiciona array de td em cada indice do array main
 function pushMain() {
-  for (let i = 0; i < colunas.length; i++) {
-    main.push(Array.from(colunas[i].children))
+  for (let i = 0; i < columns.length; i++) {
+    main.push(Array.from(columns[i].children))
   }
 }
 
@@ -109,12 +109,12 @@ function validate() {
 
 
 
-  // empate
+  // tie
   for (let i = 0; i < main.length; i++) {
     for (let j = 0; j < main[i].length; j++) {
       if (main[i][j].classList.length !== 0) {
-        empate++
-        if (empate > 902) {
+        tie++
+        if (tie > 902) {
           verifyWinner('Tie')
         }
       }
