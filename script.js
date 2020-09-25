@@ -1,5 +1,4 @@
-// Images
-let colunas = document.getElementById('colunas').children // id do tbody
+let colunas = document.getElementById('colunas').children 
 let count = 0
 let empate = 0
 let main = []
